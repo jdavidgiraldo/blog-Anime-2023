@@ -1,0 +1,193 @@
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+  background-color: rgb(48, 3, 91);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Syne Mono', monospace;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=========*/
+/* HEADER */
+/*========*/
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.header .container {
+  position: relative;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.logo-image {
+  width: 40px;
+  height: 60px;
+  margin-left: 10px;
+  filter: drop-shadow(-5px -5px 5px rgb(253, 253, 2));
+}
+
+.logo-tittle {
+  color: rgb(250, 226, 6);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  font-weight: 200;
+  text-shadow: 3px 1px 0 black, 4px 2px 0 rgb(54, 49, 196);
+}
+
+.logo-text {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-link {
+  color: rgb(227, 227, 224);
+  text-shadow: 2px 1px 0 black;
+}
+
+/*=========*/
+/* HERO */
+/*========*/
+
+.hero {
+  position: relative;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('assets/imgs/estrenos-anime-2023-980x592.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.hero .container {
+  position: relative;
+  text-align: center;
+  padding: 50px 10px 0;
+  line-height: 1;
+  color: rgb(248, 248, 243);
+  text-shadow: 3px 0 0 black, 5px 0 0 rgb(54, 49, 196);
+}
+
+.hero-tittle {
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hero-description {
+  font-size: 1.5rem;
+  color: rgb(219, 219, 216);
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: 'Syne Mono', monospace;
+  text-shadow: 3px 1px 0 black;
+}
+
+.article-img{
+  position: relative;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.article img:first-child {
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.article img:last-child {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.article:hover {
+  transform: perspective(250px) rotateX(10deg)translateY(-5%)translateZ(0);
+}
+
+.article::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: -o-linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%,
+  rgba(0, 0, 0) 95%);
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.article:hover::before{
+  opacity: 1;
+}
+
+.article:hover img:last-child{
+  opacity: 1;
+  transform: translateY(10%);
+}
