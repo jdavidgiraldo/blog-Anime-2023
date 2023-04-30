@@ -66,15 +66,15 @@ img {
   width: 40px;
   height: 60px;
   margin-left: 10px;
-  filter: drop-shadow(-5px -5px 5px rgb(253, 253, 2));
+  filter: drop-shadow(-5px -5px 5px #fae206);
 }
 
 .logo-tittle {
-  color: rgb(250, 226, 6);
+  color: #fae206;
   font-family: 'Press Start 2P', cursive;
   font-size: 1rem;
   font-weight: 200;
-  text-shadow: 3px 1px 0 black, 4px 2px 0 rgb(54, 49, 196);
+  text-shadow: 3px 1px 0 black, 4px 2px 0 #5c2ffa;
 }
 
 .logo-text {
@@ -142,11 +142,11 @@ img {
 }
 
 .hero-description {
-  color: rgb(219, 219, 216);
-  font-weight: 400;
+  color: #fae206;
+  font-weight: 500;
   font-size: 1.2rem;
   font-family: 'Syne Mono', monospace;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 2px #5c2ffa;
 }
 
 /*========*/
@@ -180,7 +180,7 @@ img {
 
 .article-tittle {
   font-size: 1.5rem;
-  color: rgb(227, 227, 16);
+  color: #fae206;
   margin-bottom: 8px;
 }
 
@@ -218,7 +218,7 @@ img {
 }
 
 .article-img:hover {
-  transform: perspective(250px) rotateX(5deg) translateY(-15%) translateZ(0);
+  transform: perspective(250px) rotateX(10deg) translateY(-15%) translateZ(0);
 }
 
 .article-img::before {
@@ -245,3 +245,20 @@ img {
   opacity: 1;
   transform: translateY(10%);
 }
+
+/*==========*/
+/* PARALLAX */
+/*=========*/
+
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-color: #5c2ffa;
+}
+
+.wave {
+  position: absolute;
+  bottom: 0;
+}
+
