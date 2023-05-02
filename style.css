@@ -556,27 +556,6 @@ img {
   }
 
   .ending {
-    height: 700px;
+    height: 750px;
   }
 }
-
-@media screen and (min-width: 1980px) {
-  .header .container,
-  .hero.container,
-  .blog,
-  .subscribe .container,
-  .footer .container {
-    margin: 0 auto;
-  }
-
-  .hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .ending{
-    height: 1000px;
-  }
-}
-
