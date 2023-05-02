@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Inconsolata', monospace;
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(5, 186, 171);
   font-size: 1rem;
   line-height: 1.5;
   margin: 0;
@@ -54,6 +54,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  max-width: 1024px;
 }
 
 .logo {
@@ -135,6 +136,7 @@ img {
   z-index: 2;
   display: flex;
   flex-direction: column;
+  max-width: 1024px;
 }
 
 .hero-tittle {
@@ -167,17 +169,27 @@ img {
   padding: 50px 0;
   color: white;
   text-shadow: 1px 1px 2px #5c2ffa;
+  max-width: 1024px;
 }
 
 .blog-tittle {
   font-size: 2rem;
   text-align: center;
+  color: #5c2ffa;
+  text-shadow: 1px 1px 1px black, 2px 2px 2px #fae206;
 }
 
-.articles {
+.articles .article {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  background-color: rgb(37, 35, 35);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+  overflow: hidden;
+  box-shadow: 1px 1px 1px 1px #5c2ffa, 3px 3px 3px 3px #fae206;
 }
 
 /* .article {
@@ -204,6 +216,7 @@ img {
   text-shadow: 1px 1px 1px #fae206;
   font-weight: 600;
   box-shadow: 2px 2px 2px #fae206;
+  overflow: hidden;
 }
 
 .article-img {
@@ -215,6 +228,7 @@ img {
 .article-img img:first-child {
   box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
   border-radius: 25px;
+  overflow: hidden;
   object-fit: cover;
   width: 100%;
 }
@@ -310,6 +324,11 @@ img {
   padding-top: 20px;
 }
 
+.subscribe .container {
+  max-width: 1024;
+  padding: 0 20px;
+}
+
 .subscribe-section {
   display: flex;
   justify-content: center;
@@ -325,11 +344,13 @@ img {
 }
 
 .subscribe-description {
-  text-shadow: 1px 1px 1px #fae206;
+  color: #fae206;
+  text-shadow: 1px 1px 1px black, 2px 2px 2px #5c2ffa;
   text-align: justify;
   text-align: center;
   line-height: 1;
   font-size: 0.8rem;
+  font-weight: 900;
 }
 
 .subs-link {
@@ -366,6 +387,7 @@ img {
 
 .footer .container {
   padding: 0 0 30px;
+  max-width: 1024px;
 }
 
 .copy {
@@ -398,4 +420,122 @@ img {
 .footer-link {
   color: rgb(227, 227, 224);
   text-shadow: 2px 1px 0 black;
+}
+
+/*============*/
+/* RESPONSIVE */
+/*===========*/
+
+@media screen and (min-width: 678px) {
+  .header .container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  .hero {
+    min-height: 750px;
+  }
+
+  .hero-tittle {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 2rem;
+  }
+
+  .tittle-number {
+    font-size: 4rem;
+  }
+
+  .blog-tittle {
+    font-size: 3rem;
+  }
+
+  .article {
+    display: flex;
+    align-items: center;
+  }
+
+  .blog .container {
+    padding: 0 20px;
+  }
+
+  .article-img {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .article-img img:nth-child(1) {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .article-body {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .article-description {
+    font-size: 1.3rem;
+  }
+
+  .articles .article {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(37, 35, 35);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 2px 2px 2px 2px #5c2ffa, 3px 3px 3px 3px #fae206;
+  }
+
+  .articles .article:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subscribe-description {
+    padding: 0 20px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header .container,
+  .hero.container,
+  .blog,
+  .subscribe .container,
+  .footer .container {
+    margin: 0 auto;
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ending {
+    height: 700px;
+  }
 }
